@@ -1,0 +1,19 @@
+.wp-editor-wrap{
+    width: calc(100% - 225px);
+    display: inline-block;
+    vertical-align: top;
+    margin: 12px 0;
+}
+
+/*
+ * Hide
+*/
+.vendor_address_2_wrapper,
+.vendor_state_wrapper,
+.vendor_city_wrapper,
+.vendor_postcode_wrapper,
+.timezone_string_wrapper,
+.find_address_wrapper{
+    display:  none !important;
+}
+
