@@ -117,12 +117,15 @@ class JobBoard
 
 	static function job_board_view()
 	{
+		$html = '';
+		ob_start();
 		if (!empty($_GET['rwmb-form-submitted'])) {
 			get_template_part('job-board/templates/submitted', null, []);
 		} else {
 			get_template_part('job-board/templates/index', null, []);
 		}
-		//get_template_part('job-board/templates/index', null, []);
+		$html .= ob_get_clean();
+		return $html;
 	}
 
 	public function job_card($atts = array())
@@ -179,7 +182,11 @@ class JobBoard
 
 	static function job_table_view()
 	{
+		$html = '';
+		ob_start();
 		get_template_part('job-board/templates/table', null, []);
+		$html .= ob_get_clean();
+		return $html;
 	}
 	static function add_new_job_view($type = 'modal')
 	{
